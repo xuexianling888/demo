@@ -26,6 +26,7 @@ public class CglibProxy implements MethodInterceptor {
         return enhancer.create();
     }
 
+    @Override
     public Object intercept(Object obj, Method method, Object[] args,
                             MethodProxy proxy) throws Throwable {
         System.out.println(method.getName() + "执行之前做一些准备工作");
